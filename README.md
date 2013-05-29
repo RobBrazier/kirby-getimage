@@ -11,7 +11,7 @@ Currently, the only way I have found to pass the `$page` variable is through a f
 `getimage($page, $imgurl, $options[, $tagorurl])`
 
 **$page** 
-  is the `$page` variable containing the information about the page that the image will be saved to (hopefully will be removed in the future)
+> is the `$page` variable containing the information about the page that the image will be saved to (hopefully will be removed in the future)
 
 **$imgurl** 
   is the URL of the image that you want to save
