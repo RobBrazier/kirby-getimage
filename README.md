@@ -9,7 +9,7 @@ GetImage is a KirbyCMS Plugin that hooks off the functionality of the [Thumb](ht
 Currently, the only way I have found to pass the `$page` variable is through a function argument, so this is the reason for the first argument. Hopefully it will be taken out in subsequent releases!
 
 ```
-  getimage(<span style="font-weight:bold">$page</span>, $imgurl, $options[, $tagorurl])
+getimage($page, $imgurl, $options[, $tagorurl])
 ```
 
 **$page** 
