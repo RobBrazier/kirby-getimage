@@ -1,7 +1,13 @@
 Kirby GetImage Plugin
 =====================
 
-GetImage is a KirbyCMS Plugin that hooks off the functionality of the [Thumb](https://github.com/bastianallgeier/kirbycms-extensions/tree/master/plugins/thumb) plugin and allows the use of remote images to be used with `thumb();`
+GetImage is a KirbyCMS Plugin that hooks off the functionality of the [Thumb](https://github.com/bastianallgeier/kirbycms-extensions/tree/master/plugins/thumb) plugin and allows the use of remote images with `thumb();`
+
+## How it Works
+
+The Plugin downloads the specified image to the directory of the current page (e.g. a blog post).
+
+This image object is then passed to `thumb()` to generate a thumbnail with the specified options, and can be outputted as an URL (or &lt;img&gt; tag from either the root URL or another URL e.g. a CDN such as Amazon Cloudfront).
 
 
 ## Usage
