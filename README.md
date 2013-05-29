@@ -14,10 +14,10 @@ Currently, the only way I have found to pass the `$page` variable is through a f
 > is the `$page` variable containing the information about the page that the image will be saved to (hopefully will be removed in the future)
 
 **$imgurl** 
-  is the URL of the image that you want to save
+>  is the URL of the image that you want to save
 
 **$options** 
-  is an array containing the information to be passed along to `thumb()` and also an extra **'cdn'** array key, where you can specify another URL for the images to be hosted from
+>  is an array containing the information to be passed along to `thumb()` and also an extra **'cdn'** array key, where you can specify another URL for the images to be hosted from
 
 **$tagorurl** 
-  is a **boolean** value stating whether the returned text contains the `ing` tag or just the URL to the image
+>  is a **boolean** value stating whether the returned text contains the `ing` tag or just the URL to the image
