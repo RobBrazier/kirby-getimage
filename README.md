@@ -21,5 +21,13 @@ getimage($page, $imgurl, $options[, $tagorurl])
 **$options** 
 >  is an array containing the information to be passed along to `thumb()` and also an extra **'cdn'** array key, where you can specify another URL for the images to be hosted from
 
-**$tagorurl** 
+**$tagorurl** (optional)
 >  is a **boolean** value stating whether the returned text contains the `ing` tag or just the URL to the image
+
+## Example Usage
+
+```php
+  <?php getimage($article, 'http://img.youtube.com/vi/oHg5SJYRHA0/maxresdefault.jpg', array('height'=>'300', 'width'=>'984', 'crop'=>true, 'cdn'=>'http://cdn.test.com'), false); ?>
+```
+would produce something like this:
+    http://cdn.test.com/thumbs/3b20166aa8acef1a4eeb36f46d4ab3ed.984.300.0.1.0.100.jpg?1369859345
