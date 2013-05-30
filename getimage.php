@@ -14,11 +14,12 @@ class getimage {
       die('You must download the <a href="https://github.com/bastianallgeier/kirbycms-extensions/tree/master/plugins/thumb">Thumb</a> Plugin to use this Plugin!');
     }
     $this->cdn = @$options['cdn'];
+    $this->fallback_filename = @$options['fallback'];
     $urlarray = explode('/', $imgurl);
     $filename = array_pop($urlarray);
     $path = $page->root().'/'.$filename;
     if(!file_exists($imgurl)){
-      $imgurl = str_replace($filename, 'hqdefault.jpg', $imgurl);
+      $imgurl = str_replace($filename, $fallback_filename, $imgurl);
     }
     if(!file_exists($path)){
       file_put_contents($path, file_get_contents($imgurl));
