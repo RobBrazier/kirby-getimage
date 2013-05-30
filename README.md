@@ -15,7 +15,7 @@ This image object is then passed to `thumb()` to generate a thumbnail with the s
 Currently, the only way I have found to pass the `$page` variable is through a function argument, so this is the reason for the first argument. Hopefully it will be taken out in subsequent releases!
 
 ```
-getimage($page, $imgurl, $options[, $tagorurl])
+getimage($page, $imgurl, $options[, $tag])
 ```
 
 **$page** 
@@ -27,7 +27,7 @@ getimage($page, $imgurl, $options[, $tagorurl])
 **$options** 
 >  is an array containing the information to be passed along to `thumb()` and also an extra **'cdn'** array key, where you can specify another URL for the images to be hosted from
 
-**$tagorurl** (optional)
+**$tag** (optional)
 >  is a **boolean** value stating whether the returned text contains the `ing` tag or just the URL to the image
 
 ## Example Usage

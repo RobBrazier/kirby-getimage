@@ -1,6 +1,6 @@
 <?php
-function getimage($page, $imgurl, $options=array(), $tagorurl=true){
-  new getimage($page, $imgurl, $options, $tagorurl);
+function getimage($page, $imgurl, $options=array(), $tag=true){
+  new getimage($page, $imgurl, $options, $tag);
 }
 
 class getimage {
@@ -10,7 +10,7 @@ class getimage {
   private $cdn;
   private $fallback_filename;
 
-  public function __construct($page, $imgurl, $options=array(), $tagorurl=true) {
+  public function __construct($page, $imgurl, $options=array(), $tag=true) {
     if(!function_exists('thumb')){
       die('You must download the <a href="https://github.com/bastianallgeier/kirbycms-extensions/tree/master/plugins/thumb">Thumb</a> Plugin to use this Plugin!');
     }
@@ -28,7 +28,7 @@ class getimage {
     if(isset($this->cdn)){
       echo str_replace(c::get('url'), $this->cdn, thumb($page->images()->find($filename), $options, false));
     } else {
-      echo thumb($page->images()->find($filename), $options, $tagorurl);
+      echo thumb($page->images()->find($filename), $options, $tag);
     }
 
   }
