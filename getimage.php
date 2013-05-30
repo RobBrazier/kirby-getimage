@@ -1,6 +1,6 @@
 <?php
-function getimage($page, $imgurl, $options=array(), $tagorurl=true, $cdn=''){
-  new getimage($page, $imgurl, $options, $tagorurl, $cdn);
+function getimage($page, $imgurl, $options=array(), $tagorurl=true){
+  new getimage($page, $imgurl, $options, $tagorurl);
 }
 
 class getimage {
