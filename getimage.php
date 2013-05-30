@@ -8,6 +8,7 @@ class getimage {
   private $height;
   private $width;
   private $cdn;
+  private $fallback_filename;
 
   public function __construct($page, $imgurl, $options=array(), $tagorurl=true) {
     if(!function_exists('thumb')){
@@ -19,7 +20,7 @@ class getimage {
     $filename = array_pop($urlarray);
     $path = $page->root().'/'.$filename;
     if(!file_exists($imgurl)){
-      $imgurl = str_replace($filename, $fallback_filename, $imgurl);
+      $imgurl = str_replace($filename, $this->fallback_filename, $imgurl);
     }
     if(!file_exists($path)){
       file_put_contents($path, file_get_contents($imgurl));
